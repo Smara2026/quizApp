@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/QuizApp/static/css/main.a1ada3ef.css",
+    "main.js": "/QuizApp/static/js/main.09db6fe6.js",
+    "static/media/lets-play-a-game-2.png": "/QuizApp/static/media/lets-play-a-game-2.6875cc452e406abe6701.png",
+    "index.html": "/QuizApp/index.html",
+    "main.a1ada3ef.css.map": "/QuizApp/static/css/main.a1ada3ef.css.map",
+    "main.09db6fe6.js.map": "/QuizApp/static/js/main.09db6fe6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1ada3ef.css",
+    "static/js/main.09db6fe6.js"
+  ]
+}
