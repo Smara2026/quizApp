@@ -170,7 +170,7 @@ export default function App() {
       }
       fetchData();
       return () => {
-        controller.abort(); // Cancels the fetch when the component unmounts
+        controller.abort(); 
       };
     },
     [quantity, difficulty, category]
