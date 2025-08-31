@@ -22,7 +22,7 @@ const initialState = {
   points: 0,
   highestScore: 0,
   secondRemaining: null,
-  quantity: null,
+  quantity: 10,
   difficulty: [],
   category: [],
 };
@@ -107,6 +107,7 @@ function reducer(state, action) {
     case "selectQuantity":
       return {
         ...state,
+        
         quantity: action.payload.value,
       };
     case "selectDifficulty":

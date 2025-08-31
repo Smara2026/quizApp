@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import Select, { components } from "react-select";
 // :root {
@@ -66,12 +67,7 @@ const customStyles = {
     padding: "1.2rem 2.4rem",
     "&:hover": {
       backgroundColor: "#343a40",
-    },
-
-    // "&:isFocused": {
-    //   backgroundColor: "#343a40",
-    // },
-  }),
+    },}),
   option: (base, { isFocused, isSelected }) => ({
     ...base,
     backgroundColor: isFocused ? "#40444b" : "#2c2f33",
@@ -94,11 +90,11 @@ const customStyles = {
     color: "inherit",
   }),
   multiValue: () => ({
-    display: "none", // Hides selected tags
+    display: "none", 
   }),
   singleValue: (base) => ({
     ...base,
-    display: "none", // hide actual selected value if needed
+    display: "none", 
   }),
 };
 
@@ -131,23 +127,22 @@ function CheckboxSelect({ options, isMulti, placeholder, dispatch, type }) {
           DropdownIndicator: DropdownIndicator,
         }}
         onChange={(e) => {
-          console.log(e);
-
-          const dataArr = isMulti ? [...e] : e;
-          // const dataArr = e.map((data) => data.value);
-          console.log(dataArr);
-
+          let dataArr = isMulti ? [...e] : e;
+          if(dataArr===null) {
+            const indArr=['10','20','30'];
+            const num=indArr[Math.floor(Math.random()*2)];
+            dataArr={value:num,label:num};
+          }
+          console.log(dataArr)
           dispatch({ type: type, payload: dataArr });
         }}
         allowSelectAll={true}
-        // value={state}
         styles={customStyles}
         placeholder={placeholder}
         onMenuOpen={() => setMenuOpen(true)}
         onMenuClose={() => setMenuOpen(false)}
         menuIsOpen={menuOpen}
         isClearable
-        // ref={menuRef}
       />
     </div>
   );
