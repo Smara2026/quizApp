@@ -141,30 +141,12 @@ export default function App() {
     },
     dispatch,
   ] = useReducer(reducer, initialState);
-  // console.log(category.toLocaleString());
-  // console.log(quantity);
   const numQuestions = questions.length;
   const totalPoints = questions.reduce((prev, curr) => {
     if (curr.difficulty === "easy") return prev + 10;
     if (curr.difficulty === "medium") return prev + 20;
     if (curr.difficulty === "hard") return prev + 30;
   }, 0);
-  // useEffect(function () {
-  //   async function fetechData() {
-  //     try {
-  //       const res = await fetch("http://localhost:8000/questions");
-  //       console.log(res);
-  //       if (!res.ok) throw new Error("Unknown Error");
-  //       const data = await res.json();
-  //       dispatch({ type: "dataFetched", payload: data });
-  //       // console.log(data);
-  //     } catch (err) {
-  //       dispatch({ type: "dataFetchFailed" });
-  //       console.error(err.message);
-  //     }
-  //   }
-  //   fetechData();
-  // }, []);
   console.log(questions);
 
   useEffect(
@@ -180,7 +162,6 @@ export default function App() {
             { signal: controller.signal }
           );
           console.log(res);
-          // if (!res.ok) throw new Error("unidentified error");
           const data = await res.json();
           dispatch({ type: "dataFetched", payload: data });
         } catch (err) {
@@ -197,7 +178,6 @@ export default function App() {
   return (
     <div className="background">
       <div className="app">
-        {/* <Header /> */}
         <Main>
           {status === "loading" && <Loader />}
           {status === "failed" && <Error />}
