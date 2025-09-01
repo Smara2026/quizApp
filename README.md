@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# **The React Quiz**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun and interactive quiz application built with modern React. Test your knowledge across a wide range of categories with customizable quiz settings.
 
-## Available Scripts
+[**Live Demo**](https://smara2026.github.io/quizApp)
+
+
+## **Features**
+
+* **Dynamic Questions**: Fetches trivia questions on-demand from the public [The Trivia API](https://the-trivia-api.com/).  
+* **Quiz Customization**: Users can select the number of questions, the difficulty level, and the specific category for their quiz.  
+* **Timed Challenge**: Each question has a 30-second timer to add an element of challenge.  
+* **Instant Feedback**: Users see immediately whether their selected answer is correct or incorrect.  
+* **Progress Tracking**: A dynamic progress bar shows the user's current position, points earned, and potential total points.  
+* **Scoring System**: Points are awarded based on question difficulty (Easy: 10, Medium: 20, Hard: 30).  
+* **High Score Tracking**: The app keeps track of the highest score achieved during the current session.  
+* **Responsive Design**: A clean and simple interface that works well on different screen sizes.
+
+## **Technologies Used**
+
+* **React**: The core of the application, built with functional components and hooks.  
+  * **useReducer**: For robust and predictable state management of the entire quiz flow.  
+  * **useEffect**: For handling asynchronous data fetching and managing the countdown timer.  
+* **JavaScript (ES6+)**: Modern JavaScript syntax for clean and efficient code.  
+* **CSS3**: For custom styling and animations.  
+* [**React Select**](https://react-select.com/): A flexible and beautiful Select Input control for ReactJS.
+
+## **Getting Started**
+
+To get a local copy up and running, follow these simple steps.
+
+### **Prerequisites**
+
+You need to have Node.js and npm installed on your machine.
+
+* [Node.js](https://nodejs.org/) (which includes npm)
+
+### **Installation**
+
+1. Clone the repo  
+   git clone \[https://github.com/smara2026/quizApp.git\](https://github.com/smara2026/quizApp.git)
+
+2. Navigate into the project directory  
+   cd quizApp
+
+3. Install NPM packages  
+   npm install
+
+4. Run the app in development mode  
+   npm start
+
+   Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to view it in the browser.
+
+## **Available Scripts**
 
 In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* npm start: Runs the app in development mode.  
+* npm test: Launches the test runner in interactive watch mode.  
+* npm run build: Builds the app for production to the build folder.  
+* npm run deploy: Deploys the application to GitHub Pages.
